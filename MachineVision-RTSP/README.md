@@ -269,5 +269,5 @@ rtmp://m_ip:m_port/m_app/m_stream
 # 转换成 http-flv
 http://m_ip/live?port=m_port&app=m_app&stream=m_stream
 ```
-
+![main](doc/img/main.gif)
 
