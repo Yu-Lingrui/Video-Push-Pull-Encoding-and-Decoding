@@ -42,9 +42,10 @@ ffmpeg -f dshow -i video="USB2.0 HD UVC WebCam" -vcodec libx264 -preset:v ultraf
 因为我们要在 WSL2 里访问本机的 RTSP 视频流，所以需要打开本机的防火墙，如下图
 <div align=middle><img src ="img/6.png" width = "100%" height = "50%" /></div>
 
-7. wsl2用 OpenCV 接收视频流
+7. wsl2用 OpenCV 接收视频流(main.cpp)
 ```
-cmake .
+cd build
+cmake ..
 make
 ./build/rtsp_demo
 ```
@@ -54,7 +55,7 @@ make
 <div align=middle><img src ="img/5.png" width = "100%" height = "50%" /></div>
 <div align=middle><img src ="img/4.png" width = "100%" height = "50%" /></div>
 
-## 2. 在步骤1的基础上完成wsl2对视频流进行tensorrt模型加速推理展示
+## 2. 在步骤1的基础上完成wsl2对视频流进行tensorrt模型加速推理展示(test_yolo_detect.cpp)
 
 可通过test/test_yolo_detect.cpp完成wsl2对视频流进行tensorrt模型加速推理展示(通过队列存储维护图像推流和拉流顺序)：
 <div align=middle><img src ="img/7.png" width = "100%" height = "50%" /></div>
